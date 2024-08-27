@@ -1,0 +1,12 @@
+:root{
+    color-scheme: light;
+}
+#hero {
+    background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/hero.png'); /* Replace with the actual image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh; /* This sets the height to full viewport height */
+}
+
