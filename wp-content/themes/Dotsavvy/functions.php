@@ -45,5 +45,55 @@ function create_brand_post_type() {
 }
 add_action('init', 'create_brand_post_type');
 
+function create_hero_section_cpt() {
+    $labels = array(
+        'name'               => 'Hero Sections',
+        'singular_name'      => 'Hero Section',
+        'menu_name'          => 'Hero Sections',
+        'name_admin_bar'     => 'Hero Section',
+        'add_new'            => 'Add New',
+        'add_new_item'       => 'Add New Hero Section',
+        'new_item'           => 'New Hero Section',
+        'edit_item'          => 'Edit Hero Section',
+        'view_item'          => 'View Hero Section',
+        'all_items'          => 'All Hero Sections',
+        'search_items'       => 'Search Hero Sections',
+        'not_found'          => 'No Hero Sections found.',
+        'not_found_in_trash' => 'No Hero Sections found in Trash.',
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'has_archive'        => true,
+        'rewrite'            => array('slug' => 'hero-sections'),
+        'supports'           => array('title', 'editor', 'thumbnail'),
+        'show_in_rest'       => true,
+        'menu_position'      => 5,
+        'menu_icon'          => 'dashicons-format-image',
+    );
+
+    register_post_type('hero_section', $args);
+}
+
+add_action('init', 'create_hero_section_cpt');
+
+
+function create_cta_post_type() {
+    register_post_type('cta',
+        array(
+            'labels' => array(
+                'name' => __('CTA'),
+                'singular_name' => __('CTA')
+            ),
+            'public' => true,
+            'has_archive' => false,
+            'supports' => array('title', 'editor','thumbnail'),
+            'menu_position' => 6,
+            'show_in_rest' => true,
+        )
+    );
+}
+add_action('init', 'create_cta_post_type');
 
 ?>

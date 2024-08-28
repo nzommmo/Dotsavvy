@@ -2,11 +2,33 @@
     color-scheme: light;
 }
 #hero {
-    background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/hero.png'); /* Replace with the actual image URL */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh; /* This sets the height to full viewport height */
 }
+#header-content{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 12px;
+    margin-bottom: 12px;
+    margin-inline-end: 12px;
+    
+}
+#menu{
+    width:50%;
+}
+#logo{
+    width:50%;
 
+}
+#brands{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#cta{
+    background-color:#d52436;
+}
