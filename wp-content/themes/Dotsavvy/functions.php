@@ -79,6 +79,22 @@ function create_hero_section_cpt() {
 add_action('init', 'create_hero_section_cpt');
 
 
+function create_Services_post_type() {
+    register_post_type('services',
+        array(
+            'labels' => array(
+                'name' => __('Service Section'),
+            ),
+            'public' => true,
+            'has_archive' => false,
+            'supports' => array('title', 'editor',),
+            'menu_position' => 6,
+            'show_in_rest' => true,
+        )
+    );
+}
+add_action('init', 'create_Services_post_type');
+
 function create_cta_post_type() {
     register_post_type('cta',
         array(
@@ -95,5 +111,24 @@ function create_cta_post_type() {
     );
 }
 add_action('init', 'create_cta_post_type');
+
+
+function create_ServiceItems_post_type() {
+    register_post_type('service-items',
+        array(
+            'labels' => array(
+                'name' => __('Services-Items'),
+                'singular_name' => __('Services-Item')
+            ),
+            'public' => true,
+            'has_archive' => false,
+            'supports' => array('title',),
+            'menu_position' => 3,
+            'show_in_rest' => true,
+        )
+    );
+}
+add_action('init', 'create_ServiceItems_post_type');
+
 
 ?>

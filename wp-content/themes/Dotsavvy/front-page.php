@@ -81,30 +81,30 @@ endif;
 
 <section>
     
-<div class="m-16 mt-10 rounded-md">
+<div class="md:m-16 m-5 mt-10 rounded-md">
 <?php
 // Query for CTA post type
 $cta_query = new WP_Query(array(
     'post_type' => 'cta',
-    'posts_per_page' => 1, // Adjust as needed
+    'posts_per_page' => 2, // Adjust as needed
 ));
 
 if ($cta_query->have_posts()) :
     while ($cta_query->have_posts()) : $cta_query->the_post(); ?>
         <div class="">
 
-        <div class="cta-section grid md:grid-cols-2 ">
+        <div class="cta-section grid grid-cols-2 ">
             <?php if (has_post_thumbnail()) : ?>
-                <div class="cta-thumbnail rounded-lg">
+                <div id="test" class="cta-thumbnail rounded-lg pt-5">
                     <?php the_post_thumbnail(); ?>
                 </div>
             <?php endif; ?>
-            <div class="cta-content px-16 pt-10 rounded-md" id="cta">
-               <div class=" tracking-tighter leading-3">
-               <h2 class="text-white text-8xl"><?php the_title(); ?></h2>
+            <div class="cta-content md:px-16 md:pt-10 px-8  rounded-md" id="cta">
+               <div id="cta-title" class=" tracking-tighter leading-3  pt-5">
+               <h2 class="text-white md:text-7xl text-3xl  "><?php the_title(); ?></h2>
 
                </div> 
-                <div class="cta-text py-10  text-white">
+                <div class="cta-text md:py-10 py-5 md:text-base text-xs  text-white">
                     <p class="text-white">  <?php the_content(); ?>
                     </p>
                 </div>
@@ -120,6 +120,132 @@ endif;
 </section>
 
 
+<section>
+<div class="relative mt-10 mb-10">
+    <div  class="flex justify-between">
+        <div class="">
+            <div   class="services md:w-1/2 w-1/2  ">
+            <?php
+            $services_query = new WP_Query(array(
+                'post_type' => 'services',
+                'posts_per_page' => -1
+            ));
+            
+            if ($services_query->have_posts()) :
+                while ($services_query->have_posts()) : $services_query->the_post(); ?>
+                    <div class="service md:px-24 md:pt-24 mr-14 px-10 pt-12 ">
+                        <div class="md:w-1/4">
+                        <h2 class="service-title md:text-7xl text-3xl">
+                            <?php the_title(); ?>
+                        </h2>
+                        </div>
+                        <div class="service-content md:w-1/2 md:py-10  py-8">
+                            <?php the_content(); ?>
+                        </div>
+                    </div>
+                <?php endwhile;
+                wp_reset_postdata();
+            endif;
+            ?>
+        <div id="service-items" class="">
+        <?php
+
+$service_items_query = new WP_Query(array(
+    'post_type' => 'service-items',
+    'posts_per_page' => -1 // Display all service items
+));
+
+if ($service_items_query->have_posts()) :
+    echo '<div class="grid grid-cols-3 gap-3  md:pl-0 pl-20 md:gap-y-12 gap-y-12">';
+    while ($service_items_query->have_posts()) : $service_items_query->the_post(); ?>
+        <div class="service-item flex">
+            <h2 id="service-item-rounded"  class="service-title  flex border rounded-full md:px-12  md:py-2 px-3 py-2  tracking-tighter text-sm md:tracking-normal md:text-base "><?php the_title(); ?></h2>
+        </div>
+    <?php endwhile;
+    echo '</div>';
+    wp_reset_postdata();
+endif;
+
+        ?>
+        </div>
+
+    </div>
+
+
+            </div>
+          
+        </div>
+</div>  
+</section>
+
+<section>
+    <div class="relative " id="">
+        <div class=" py-5  px-10 ">
+            <h1 class="md:text-7xl text-3xl">Our Work</h1>
+
+        </div>
+        <div class=" pb-20  flex" id="Hunters">
+            <div class="w-1/3 px-20">
+            <div class="flex flex-col gap-64 items-center justify-center">
+            <div id="Hunters-logo"  class="flex flex-col mt-12">
+
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam provident voluptatem nihil omnis nostrum deleniti unde iure ex sed voluptates corporis molestias repellat, fugiat dolore asperiores perspiciatis necessitatibus! Laborum, minus?
+            </div>
+
+            </div>
+
+            </div>
+<div class="w-1/2 ">
+<div id="work-cover" class=" mr-32 mt-12 flex items-center ">
+                
+                <div id="prop" class=" ">
+
+                </div>
+                <div id="Hunters-bottle" class=" mt-2 w-1/2">
+
+                </div>
+            
+            </div>
+</div>
+            
+            <div id="Made" class="mt-7">
+              
+            </div>
+            <div id="shot" class="">
+                </div>
+
+            <div id="spray">
+                <div id="shalina-logo">
+                
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+    </div>
+</section>
+
+<section>
+<div class="relative mt-10 mb-10">
+    <div class="flex justify-between">
+        <div class="services">
+            <p>Our Track Record</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil natus temporibus omnis non enim, in eligendi facilis sit. Labore iste id ab obcaecati aut, quod velit beatae totam suscipit tempora?</p>
+        </div>
+        <div>
+            2
+        </div>
+
+    </div>
+
+    
+</div> 
+ </section>
 
 <?php 
 get_footer();
