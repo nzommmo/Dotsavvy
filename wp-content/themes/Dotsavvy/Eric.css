@@ -103,7 +103,7 @@
     background-repeat: no-repeat;
     width: 100px;
     height: 500px; 
-    margin-left: 65%;
+    margin-left: 60.5%;
     margin-top: 60px;
     position: absolute;
 }
@@ -138,7 +138,7 @@
     width: 500px;
     height: 350px;
     position: absolute;
-    margin-left: 54%;
+    margin-left: 49.5%;
     margin-top: 10%;
     
 }
@@ -165,6 +165,100 @@
         background-repeat: no-repeat;
         width: 80px;
         height: 50px; 
+        
+    }
+    #work-cover {
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Upside-Car.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-bottom: 10%;
+        margin-left:-22%;
+        width: 350px;
+        height: 300px; /* This sets the height to full viewport height */
+    }
+    #spray{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Spray.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 485px;
+        margin-top: -9%;
+        padding-left: 6%;
+        padding-right:-10%;
+        
+         
+    }
+    #Hunters-bottle{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Hunters-choice.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 35%;
+        height: 220px; 
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 12%;
+    
+    }
+    #Made{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Layer-16-copy.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 60px;
+        height: 300px; 
+        margin-left: 62%;
+        margin-top: 7.5%;
+        position: absolute;
+    }
+    #prop{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/sitting-man.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width:35%;
+        height: 800px; 
+        position: absolute;
+        margin-left: -3%;
+        margin-top: 18%;
+    }
+    #shot{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Takes-their-Shot.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 180px;
+        position: absolute;
+        margin-left: 67.4%;
+        margin-top: 15%;
+        
+    }
+    #shalina-logo{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Shalina.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 50px;
+        height: 100px; 
+        margin-left: 40px;
+        margin-top: 40%;
+        
+    }
+    #Work-div{
+        
+    }
+    #shalina-logo{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Shalina.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 50px;
+        height: 100px; 
+        margin-left: 5px;
+        margin-top: 60%;
         
     }
 }

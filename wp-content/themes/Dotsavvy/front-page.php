@@ -185,12 +185,12 @@ endif;
 
         </div>
         <div class="   flex" id="Hunters">
-            <div class=" md:px-20 px-5">
-            <div class="flex flex-col gap-52 items-center justify-center">
-            <div id="Hunters-logo"  class="flex flex-col mt-12">
+            <div id="Work-div"   class="md:w-full  py-5 md:px-20 px-3">
+            <div class="flex flex-col  md:gap-52 gap-32 items-center md:text-base text-xs">
+            <div id="Hunters-logo"  class="flex flex-col md:mt-10 mt-6">
 
             </div>
-            <div>
+            <div class="md:w-full w-3/4">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam provident voluptatem nihil omnis nostrum deleniti unde iure ex sed voluptates corporis molestias repellat, fugiat dolore asperiores perspiciatis necessitatibus! Laborum, minus?
             </div>
 
