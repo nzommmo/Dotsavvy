@@ -28,14 +28,14 @@ if ($hero_query->have_posts()) :
         $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
         ?>
         <div id="hero" class="hero-section" style="background-image: url('<?php echo esc_url($thumbnail_url); ?>'); background-size: cover; background-position: center;">
-            <div class="hero-conten text-white pt-80 md:ml-20 ml-4">
+            <div class="hero-content text-white md:pt-60 sm:pt-64 pt-72  md:ml-20 ml-4">
                 <div class="md:w-1/3 w-1/2">
-                <h1 class="md:text-7xl text-2xl ">
+                <h1 class="md:text-7xl sm:text-5xl text-3xl md:tracking-normal sm:tracking-normal tracking-tight">
                     <?php the_title(); ?>
                 </h1>
 
                 </div>
-                <div class="pt-3 md:w-1/4 w-1/2 md:text-xl text-xl">
+                <div class="pt-3 md:w-1/4 w-1/2 md:text-xl sm:text-xl text-xs ">
                 <p class="text-xl"><?php the_content(); ?>
                 </p>
                 </div>
@@ -68,7 +68,7 @@ endif;
                         echo '</tr><tr>'; // Start a new row every 7 images
                     }
             ?>
-                    <td id="brand-images" style="padding: 15px;"><img src="<?php echo esc_url($brand_image); ?>" alt="<?php the_title(); ?>" class="w-full pt-3"></td>
+                    <td id="brand-images" style="padding: 15px; "><img src="<?php echo esc_url($brand_image); ?>" alt="<?php the_title(); ?>" class="w-full pt-3"></td>
             <?php
                     $counter++;
                 endwhile;
@@ -93,7 +93,7 @@ if ($cta_query->have_posts()) :
     while ($cta_query->have_posts()) : $cta_query->the_post(); ?>
         <div class="">
 
-        <div class="cta-section grid grid-cols-2 ">
+        <div class="cta-section grid md:grid-cols-2 sm:grid-cols-2 ">
             <?php if (has_post_thumbnail()) : ?>
                 <div id="test" class="cta-thumbnail rounded-lg pt-5">
                     <?php the_post_thumbnail(); ?>
@@ -121,10 +121,11 @@ endif;
 
 
 <section>
-<div class="relative mt-10 mb-10">
-    <div  class="flex justify-between">
+<div class="relative  mt-10 mb-10">
+    <div  class="flex items-center justify-between">
+       
         <div class="">
-            <div   class="services md:w-1/2 sm:w-1/2  ">
+            <div   class="services md:w-1/2 sm:w-1/2 w-2/3  ">
             <?php
             $services_query = new WP_Query(array(
                 'post_type' => 'services',
@@ -133,8 +134,8 @@ endif;
             
             if ($services_query->have_posts()) :
                 while ($services_query->have_posts()) : $services_query->the_post(); ?>
-                    <div class="service md:px-24 md:pt-24 sm:mr-14 sm:px-10 sm:pt-12 ">
-                        <div class="md:w-1/4">
+                    <div class="service md:px-24 md:pt-24 sm:mr-14 mr-5 px-3 py-2 sm:px-10 sm:pt-12 ">
+                        <div class="md:w-1/4 w">
                         <h2 class="service-title md:text-7xl sm:text-3xl">
                             <?php the_title(); ?>
                         </h2>
@@ -156,10 +157,10 @@ $service_items_query = new WP_Query(array(
 ));
 
 if ($service_items_query->have_posts()) :
-    echo '<div class="sm:grid grid-cols-3 sm:gap-3  md:pl-0 sm:pl-20 md:gap-y-12 sm:gap-y-12">';
+    echo '<div class="grid md:grid-cols-3 sm:grid-cols-3 grid-cols-1   sm:gap-3  gap-5 md:pl-0 sm:pl-20 pl-40 md:gap-y-12 sm:gap-y-12">';
     while ($service_items_query->have_posts()) : $service_items_query->the_post(); ?>
         <div class="service-item flex">
-            <h2 id="service-item-rounded"  class="service-title  flex border rounded-full md:px-12  md:py-2 sm:px-3 sm:py-2  tracking-tighter text-sm md:tracking-normal md:text-base "><?php the_title(); ?></h2>
+            <h2 id="service-item-rounded"  class="service-title  flex border rounded-full md:px-12  md:py-2 sm:px-3 sm:py-2 px-2 tracking-tighter sm:text-xs text-xs md:tracking-normal md:text-base "><?php the_title(); ?></h2>
         </div>
     <?php endwhile;
     echo '</div>';
