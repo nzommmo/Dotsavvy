@@ -58,9 +58,10 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    margin-left: -18%;
-    width: 100%;
-    height: 600px; /* This sets the height to full viewport height */
+    padding-bottom: 10%;
+    margin-left:-15%;
+    width: 700px;
+    height: 500px; /* This sets the height to full viewport height */
 }
 #prop{
     background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/sitting-man.png');
@@ -70,7 +71,8 @@
     width:35%;
     height: 600px; 
     position: absolute;
-    margin-left: -55px;
+    margin-left: -2%;
+    margin-top: 5%;
 }
 #Hunters-bottle{
     background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Hunters-choice.png');
@@ -78,10 +80,10 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 35%;
-    height: 420px; 
+    height: 380px; 
     position: absolute;
-    margin-top: 20px;
-    margin-left: 7%;
+    margin-top: 10%;
+    margin-left: 9%;
 
 }
 
@@ -90,7 +92,7 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100px;
+    width: 150px;
     height: 100px; 
     
 }
@@ -100,9 +102,10 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 100px;
-    height: 550px; 
-    margin-left: -21%;
-    margin-top: 80px;
+    height: 500px; 
+    margin-left: 65%;
+    margin-top: 60px;
+    position: absolute;
 }
 #shalina-logo{
     background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Shalina.png');
@@ -112,25 +115,31 @@
     width: 70px;
     height: 100px; 
     margin-left: 40px;
+    margin-top: 40%;
     
 }
 #spray{
     background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Spray.png');
-    background-size: auto;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 500px;
-    height: 650px;
-    margin-left: 36px;
+    width: 100%;
+    height: 670px;
+    margin-left:-5%;
+    margin-top: -6%;
+    
      
 }
 #shot{
-    transform: rotate(270deg);
-    transform-origin: left top;
-    margin-top: 20%;
-    width: 20px;
-    height: max-content;
-    
+    background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Takes-their-Shot.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 350px;
+    position: absolute;
+    margin-left: 54%;
+    margin-top: 10%;
     
 }
 
@@ -144,8 +153,18 @@
         width: 400px;
     }
 }
+/*Large Devices*/
 @media (min-width:640px) and (max-width: 1023px) {
     #cta-title{
         width: 160px;
+    }
+    #Hunters-logo{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Hunters-Choice-logo.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 80px;
+        height: 50px; 
+        
     }
 }

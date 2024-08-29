@@ -178,15 +178,15 @@ endif;
 </div>  
 </section>
 
-<section>
+<section class="">
     <div class="relative " id="">
-        <div class=" py-5  px-10 ">
+        <div class="  pb-5 py-5  px-10 ">
             <h1 class="md:text-7xl text-3xl">Our Work</h1>
 
         </div>
-        <div class=" pb-20  flex" id="Hunters">
-            <div class="w-1/3 px-20">
-            <div class="flex flex-col gap-64 items-center justify-center">
+        <div class="   flex" id="Hunters">
+            <div class=" md:px-20 px-5">
+            <div class="flex flex-col gap-52 items-center justify-center">
             <div id="Hunters-logo"  class="flex flex-col mt-12">
 
             </div>
@@ -198,7 +198,7 @@ endif;
 
             </div>
 <div class="w-1/2 ">
-<div id="work-cover" class=" mr-32 mt-12 flex items-center ">
+<div id="work-cover" class=" mr-32 mt-12 pb-5  flex items-center ">
                 
                 <div id="prop" class=" ">
 
@@ -230,7 +230,7 @@ endif;
     </div>
 </section>
 
-<section>
+<section class="">
 <div class="relative mt-10 mb-10">
     <div class="flex justify-between">
         <div class="services">
