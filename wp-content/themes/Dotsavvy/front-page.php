@@ -28,9 +28,9 @@ if ($hero_query->have_posts()) :
         $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
         ?>
         <div id="hero" class="hero-section" style="background-image: url('<?php echo esc_url($thumbnail_url); ?>'); background-size: cover; background-position: center;">
-            <div class="hero-conten text-white pt-80 md:ml-20 ml-10">
+            <div class="hero-conten text-white pt-80 md:ml-20 ml-4">
                 <div class="md:w-1/3 w-1/2">
-                <h1 class="md:text-7xl text-7xl ">
+                <h1 class="md:text-7xl text-2xl ">
                     <?php the_title(); ?>
                 </h1>
 
@@ -68,7 +68,7 @@ endif;
                         echo '</tr><tr>'; // Start a new row every 7 images
                     }
             ?>
-                    <td id="brand-images" style="padding: 15px;"><img src="<?php echo esc_url($brand_image); ?>" alt="<?php the_title(); ?>" class="w-full"></td>
+                    <td id="brand-images" style="padding: 15px;"><img src="<?php echo esc_url($brand_image); ?>" alt="<?php the_title(); ?>" class="w-full pt-3"></td>
             <?php
                     $counter++;
                 endwhile;
@@ -99,9 +99,9 @@ if ($cta_query->have_posts()) :
                     <?php the_post_thumbnail(); ?>
                 </div>
             <?php endif; ?>
-            <div class="cta-content md:px-16 md:pt-10 px-8  rounded-md" id="cta">
+            <div class="cta-content md:px-16 md:pt-10 sm:px-8 px-2 rounded-md" id="cta">
                <div id="cta-title" class=" tracking-tighter leading-3  pt-5">
-               <h2 class="text-white md:text-7xl text-3xl  "><?php the_title(); ?></h2>
+               <h2 class="text-white md:text-7xl sm:text-3xl  "><?php the_title(); ?></h2>
 
                </div> 
                 <div class="cta-text md:py-10 py-5 md:text-base text-xs  text-white">
@@ -124,7 +124,7 @@ endif;
 <div class="relative mt-10 mb-10">
     <div  class="flex justify-between">
         <div class="">
-            <div   class="services md:w-1/2 w-1/2  ">
+            <div   class="services md:w-1/2 sm:w-1/2  ">
             <?php
             $services_query = new WP_Query(array(
                 'post_type' => 'services',
@@ -133,13 +133,13 @@ endif;
             
             if ($services_query->have_posts()) :
                 while ($services_query->have_posts()) : $services_query->the_post(); ?>
-                    <div class="service md:px-24 md:pt-24 mr-14 px-10 pt-12 ">
+                    <div class="service md:px-24 md:pt-24 sm:mr-14 sm:px-10 sm:pt-12 ">
                         <div class="md:w-1/4">
-                        <h2 class="service-title md:text-7xl text-3xl">
+                        <h2 class="service-title md:text-7xl sm:text-3xl">
                             <?php the_title(); ?>
                         </h2>
                         </div>
-                        <div class="service-content md:w-1/2 md:py-10  py-8">
+                        <div class="service-content md:w-1/2 md:py-10 sm:py-8">
                             <?php the_content(); ?>
                         </div>
                     </div>
@@ -156,10 +156,10 @@ $service_items_query = new WP_Query(array(
 ));
 
 if ($service_items_query->have_posts()) :
-    echo '<div class="grid grid-cols-3 gap-3  md:pl-0 pl-20 md:gap-y-12 gap-y-12">';
+    echo '<div class="sm:grid grid-cols-3 sm:gap-3  md:pl-0 sm:pl-20 md:gap-y-12 sm:gap-y-12">';
     while ($service_items_query->have_posts()) : $service_items_query->the_post(); ?>
         <div class="service-item flex">
-            <h2 id="service-item-rounded"  class="service-title  flex border rounded-full md:px-12  md:py-2 px-3 py-2  tracking-tighter text-sm md:tracking-normal md:text-base "><?php the_title(); ?></h2>
+            <h2 id="service-item-rounded"  class="service-title  flex border rounded-full md:px-12  md:py-2 sm:px-3 sm:py-2  tracking-tighter text-sm md:tracking-normal md:text-base "><?php the_title(); ?></h2>
         </div>
     <?php endwhile;
     echo '</div>';
@@ -185,13 +185,13 @@ endif;
 
         </div>
         <div class="   flex" id="Hunters">
-            <div id="Work-div"   class="md:w-full  py-5 md:px-20 px-3">
-            <div class="flex flex-col  md:gap-52 gap-32 items-center md:text-base text-xs">
-            <div id="Hunters-logo"  class="flex flex-col md:mt-10 mt-6">
+            <div id="Hunters-div"   class="md:w-full  py-5 md:px-20 px-3">
+            <div id="Hunters-div-sect" class="flex flex-col lg:gap-52  md:gap-32 sm:gap-36 gap-15 items-center md:text-base text-xs">
+            <div id="Hunters-logo"  class="flex flex-col md:mt-10 sm:mt-6">
 
             </div>
-            <div class="md:w-full w-3/4">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam provident voluptatem nihil omnis nostrum deleniti unde iure ex sed voluptates corporis molestias repellat, fugiat dolore asperiores perspiciatis necessitatibus! Laborum, minus?
+            <div  id="Work-div" class="md:w-full w-3/4">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam provident voluptatem nihil omnis nostrum deleniti unde iure ex sed voluptates corporis molestias repellat, 
             </div>
 
             </div>

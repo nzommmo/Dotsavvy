@@ -1,13 +1,7 @@
 :root{
     color-scheme: light;
 }
-#hero {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh; /* This sets the height to full viewport height */
-}
+
 #header-content{
     display: flex;
     justify-content: space-between;
@@ -50,7 +44,7 @@
 }
 
 #Hunters{
-    background-color:#d52436;
+    background-color:#ece7d4;
 }
 
 #work-cover {
@@ -153,8 +147,8 @@
         width: 400px;
     }
 }
-/*Large Devices*/
-@media (min-width:640px) and (max-width: 1023px) {
+/* Small Devices*/
+@media (min-width:640px) and (max-width: 767px) {
     #cta-title{
         width: 160px;
     }
@@ -261,4 +255,196 @@
         margin-top: 60%;
         
     }
+    #hero {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh; /* This sets the height to full viewport height */
+    }
+}
+
+/* Phones */
+@media (max-width: 639px) {
+    #hero {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh; /* This sets the height to full viewport height */
+    }
+    #Work-div{
+        font-size:xx-small;
+        width: 115px;
+    }
+    #Hunters-logo{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Hunters-Choice-logo.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 45px;
+        height: 50px; 
+        
+    }
+    #Hunters-bottle{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Hunters-choice.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 35%;
+        height: 110px; 
+        position: absolute;
+        margin-top: 17%;
+        margin-left: 30%;
+    
+    }
+    #work-cover {
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Upside-Car.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        margin-top: 10%;
+        margin-left:-8%;
+        width: 200px;
+        height: 180px; /* This sets the height to full viewport height */
+    }
+    #Made{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Layer-16-copy.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 60px;
+        height: 180px; 
+        margin-left: 239px;
+        margin-top: 10%;
+        position: absolute;
+    }
+    #spray{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Spray.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 18%;
+        height: 270px;
+        margin-top: -9%;
+        padding-left: -21px;
+        padding-right:-26%;
+        
+         
+    }
+    #shot{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Takes-their-Shot.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 110px;
+        position: absolute;
+        margin-left: 270px;
+        margin-top: 19%;
+        
+    }
+    #shalina-logo{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Shalina.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 60px; 
+        margin-left: 5px;
+        margin-top: 60%;
+        
+    }
+    #prop{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/sitting-man.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width:38%;
+        height: 550px; 
+        position: absolute;
+        margin-left: 7%;
+        margin-top:38%;
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    #Work-div{
+        width: 200px;
+    }
+   
+    #work-cover {
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Upside-Car.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-bottom: 10%;
+        margin-left:-42%;
+        width: 600px;
+        height: 500px; /* This sets the height to full viewport height */
+    }
+    #Hunters-bottle{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Hunters-choice.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 35%;
+        height: 380px; 
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 19%;
+    
+    }
+    #Hunters-div{
+        padding-left: 20px;
+    }
+    #prop{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/sitting-man.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width:40%;
+        height: 600px; 
+        position: absolute;
+        margin-left: 1%;
+        margin-top: 16%;
+    }
+    #Made{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Layer-16-copy.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100px;
+        height: 500px; 
+        margin-left: 66.5%;
+        margin-top: 60px;
+        position: absolute;
+    }
+     #shot{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Takes-their-Shot.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 240px;
+        position: absolute;
+        margin-left: 630px;
+        margin-top: 19%;
+        
+    }
+    #spray{
+        background-image: url('http://localhost/Dotsavvy/wp-content/uploads/2024/08/Spray.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 670px;
+        margin-left:-2%;
+        margin-top: -10%;
+        
+         
+    }
+  
 }
