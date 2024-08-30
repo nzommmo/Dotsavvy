@@ -234,11 +234,29 @@ endif;
 <section class="">
 <div class="relative mt-10 mb-10">
     <div class="flex justify-between">
-        <div class="services">
+        <div class="services w-3/4 ">
+            <div class="w-3/5">
             <p>Our Track Record</p>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil natus temporibus omnis non enim, in eligendi facilis sit. Labore iste id ab obcaecati aut, quod velit beatae totam suscipit tempora?</p>
+
+            </div>
         </div>
         <div>
+            <div class="grid grid-cols-2">
+                <div>
+                    20+
+                </div>
+                <div>
+                    16
+                </div>
+                <div>
+                    100%
+                </div>
+                <div>
+                    1000+
+                </div>
+
+            </div>
             2
         </div>
 
