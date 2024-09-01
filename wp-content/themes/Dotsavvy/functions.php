@@ -3,6 +3,7 @@ function test_theme_theme_support(){
     add_theme_support('title-tag');
     add_theme_support('custom-logo');
     add_theme_support('post-thumbnails');
+    add_theme_support('widgets');
 
 }
 add_action('after_setup_theme','test_theme_theme_support');
@@ -130,7 +131,10 @@ function create_ServiceItems_post_type() {
 }
 add_action('init', 'create_ServiceItems_post_type');
 
-
-
+function enqueue_custom_scripts() {
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('custom-script', get_template_directory_uri() . '/custom-script.js', array('jquery'), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
 ?>

@@ -234,30 +234,44 @@ endif;
 <section class="">
 <div class="relative mt-10 mb-10">
     <div class="flex justify-between">
-        <div class="services w-3/4 ">
-            <div class="w-3/5">
-            <p>Our Track Record</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil natus temporibus omnis non enim, in eligendi facilis sit. Labore iste id ab obcaecati aut, quod velit beatae totam suscipit tempora?</p>
+        <div class="services md:w-1/2 sm:w-3/4 md:p-16 p-5 ">
+            <div class="md:w-3/2 w-1/2 ">
+                <div class="flex flex-col items-center justify-center">
+                <p class="md:text-7xl text-6xl">Our Track Record</p>
+            <p class="pt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil natus temporibus omnis non enim, in eligendi facilis sit. Labore iste id ab obcaecati aut, quod velit beatae totam suscipit tempora?</p>
 
+                </div>
+         
             </div>
         </div>
         <div>
-            <div class="grid grid-cols-2">
-                <div>
-                    20+
-                </div>
-                <div>
-                    16
-                </div>
-                <div>
-                    100%
-                </div>
-                <div>
-                    1000+
-                </div>
-
-            </div>
-            2
+        <div id="stats" class="grid grid-cols-2 gap-5 md:mt-0 sm:mt-10 sm:ml-20">
+    <div class="track-card bg-white shadow-lg md:w-72 md:h-52 w-44 h-32 border-t-2 border-black opacity-0 translate-y-10 transition-all duration-500">
+        <div class="pt-2 md:my-16 flex flex-col my-5 items-center justify-center">
+            <p class="text-4xl text-red-600 font-semibold statistic-number" data-number="20" data-symbol="+">0</p>
+            <p>Years Of Experience</p>
+        </div>
+    </div>
+    <div class="track-card bg-white shadow-lg md:w-72 md:h-52 w-44 h-32 border-t-2 border-red-500 opacity-0 translate-y-10 transition-all duration-500">
+        <div class="pt-2 flex flex-col md:my-16 sm:my-5 items-center justify-center">
+            <p class="text-4xl text-red-600 font-semibold statistic-number" data-number="16">0</p>
+            <p>Digital Gurus</p>
+        </div>
+    </div>
+    <div class="track-card shadow-lg bg-white md:w-72 md:h-52 w-44 h-32 border-t-2 border-red-500 opacity-0 translate-y-10 transition-all duration-500">
+        <div class="pt-2 flex flex-col md:my-16 my-5 items-center justify-center">
+            <p class="text-4xl text-red-600 font-semibold statistic-number" data-number="100" data-symbol="%">0</p>
+            <p>Business</p>
+        </div>
+    </div>
+    <div class="track-card shadow-lg bg-white md:w-72 md:h-52 w-44 h-32 border-t-2 border-black opacity-0 translate-y-10 transition-all duration-500">
+        <div class="pt-2 flex flex-col md:my-16 my-5 items-center justify-center">
+            <p class="text-4xl text-red-600 font-semibold statistic-number" data-number="1000" data-symbol="+">0</p>
+            <p>Finished Projects</p>
+        </div>
+    </div>
+</div>
+         
         </div>
 
     </div>
@@ -265,6 +279,7 @@ endif;
     
 </div> 
  </section>
+ 
 
 <?php 
 get_footer();
