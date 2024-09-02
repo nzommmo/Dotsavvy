@@ -1,6 +1,8 @@
-<?php 
-get_header();
-?>
+<?php
+/*
+Template Name: Homepage
+*/
+get_header(); ?>
 <section id="header">
     <div class="relative"> 
         <div id="header-content" class="flex justify-between  pt-2">
@@ -185,48 +187,63 @@ endif;
             <h1 class="md:text-7xl text-3xl">Our Work</h1>
 
         </div>
-        <div class="   flex" id="Hunters">
+        <div class="   flex justify-between" id="Hunters">
             <div id="Hunters-div"   class="md:w-full  py-5 md:px-20 px-3">
-            <div id="Hunters-div-sect" class="flex flex-col lg:gap-52  md:gap-32 sm:gap-36 gap-15 items-center md:text-base text-xs">
+            <div id="Hunters-div-sect" class="flex flex-col lg:gap-52  md:gap-32 sm:gap-36 gap-15 items-center md:text-base text-md">
             <div id="Hunters-logo"  class="flex flex-col md:mt-10 sm:mt-6">
 
             </div>
-            <div  id="Work-div" class="md:w-full w-3/4">
+            <div  id="Work-div" class="md:w-full w-full">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam provident voluptatem nihil omnis nostrum deleniti unde iure ex sed voluptates corporis molestias repellat, 
             </div>
 
             </div>
 
             </div>
-<div class="w-1/2 ">
-<div id="work-cover" class=" mr-32 mt-12 pb-5  flex items-center ">
+<div class="   ">
+<div id="work-cover" class=" mt-12 mb-6  flex items-center ">
                 
                 <div id="prop" class=" ">
 
                 </div>
-                <div id="Hunters-bottle" class=" mt-2 w-1/2">
+                <div class="carousel-container md:ml-4 sm:ml-4  ml-4">
+    <div class="carousel">
+        <div class="carousel-slides">
+            <?php
+            // Query to get carousel posts
+            $args = array(
+                'post_type' => 'carousel',
+                'posts_per_page' => -1,
+                'orderby' => 'date',
+                'order' => 'ASC'
+            );
+            $carousel_query = new WP_Query($args);
 
-                </div>
+            if ($carousel_query->have_posts()) :
+                while ($carousel_query->have_posts()) : $carousel_query->the_post();
+                    $image = get_the_post_thumbnail_url(get_the_ID(), 'full'); // Get the featured image
+            ?>
+                    <div class="carousel-slide md:mt-20">
+                        <img src="<?php echo esc_url($image); ?>" alt="<?php the_title(); ?>">
+                    </div>
+            <?php
+                endwhile;
+                wp_reset_postdata();
+            endif;
+            ?>
+        </div>
+        <a class="carousel-prev" onclick="moveSlide(-1)">&#10094;</a>
+        <a class="carousel-next" onclick="moveSlide(1)">&#10095;</a>
+    </div>
+</div>
             
+
             </div>
 </div>
             
-            <div id="Made" class="mt-7">
-              
-            </div>
-            <div id="shot" class="">
-                </div>
+           
 
-            <div id="spray">
-                <div id="shalina-logo">
-                
-                </div>
-
-            </div>
-
-            
-
-        </div>
+      
 
     </div>
 </section>
@@ -279,8 +296,112 @@ endif;
     
 </div> 
  </section>
- 
 
-<?php 
-get_footer();
-?>
+<section>
+    <div class="relative">
+        <div id="form" class="flex items-center justify-center">
+            <div class=" ">
+                <h1 class="text-white text-3xl">How can we help?</h1>
+                <form id="contactForm" action="<?php echo admin_url('admin-post.php'); ?>" method="post" class="pt-5 flex flex-col w-full">
+    <div class="flex justify-between">
+        <input type="text" name="name" class="bg-transparent p-1 border border-neutral-500 rounded-md text-white" placeholder="Name" required>
+        <input type="text" name="phone" class="bg-transparent p-1 border border-neutral-500 rounded-md" placeholder="Phone" required>
+    </div>
+    <div class="mt-5">
+        <input type="email" name="email" class="w-full bg-transparent p-1 border border-neutral-500 rounded-md" placeholder="Email" required>
+    </div>
+    <div class="mt-8 text-white"> 
+        <h1 class="text-3xl">I'm interested in...</h1>
+        <div class="mt-3 flex md:gap-8 sm:gap-5 sm:text-xs">
+            <button type="button" class="interest-button" data-value="UI/UX">UI/UX</button>
+            <button type="button" class="interest-button" data-value="Mobile App Design">Mobile App Design</button>
+            <button type="button" class="interest-button" data-value="Email Marketing">Email Marketing</button>
+            <button type="button" class="interest-button" data-value="Social Media Mgt">Social Media Mgt</button>
+        </div>
+        <input type="hidden" name="interest" id="interestField" value="">
+        <div class="flex mt-5">
+            <div class="flex gap-4">
+                <input type="text" name="other" class="w-1/2 bg-transparent p-1 border border-neutral-500 rounded-md" placeholder="Other. Type Here">
+                <input type="hidden" name="action" value="submit_form">
+                <button class="bg-red-500 px-8 py-1 rounded-sm" type="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('.interest-button');
+        const interestField = document.getElementById('interestField');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                buttons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Set value of hidden field
+                interestField.value = button.getAttribute('data-value');
+            });
+        });
+    });
+</script>
+
+<style>
+    .interest-button {
+        background-color: transparent;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        padding: 5px 15px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .interest-button.active {
+        background-color: #f00; /* Change to the color you prefer */
+        border-color: #f00;
+    }
+</style>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="relative">
+        <div>
+            <h1>ews & logs</h1>
+        </div> 
+            <div class="flex items-center justify-between  md:gap-12 sm:gap-6 md:m-16 sm:m-8 sm:text-sm">
+                <div class="flex flex-col gap-4">
+                    <p>22 May 2023</p>
+                    <p>Dotsavvy Awards</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quaerat natus doloremque sunt, veniam, iste delectus earum, possimus totam accusantium temporibus laborum quod amet! Quod totam ratione suscipit obcaecati ipsa.</p>
+                 
+                </div>
+                <div class="flex flex-col gap-4">
+                <p>22 May 2023</p>
+                    <p>Dotsavvy Awards</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quaerat natus doloremque sunt, veniam, iste delectus earum, possimus totam accusantium temporibus laborum quod amet! Quod totam ratione suscipit obcaecati ipsa.</p>
+                </div>
+                <div class="flex flex-col gap-4">
+                <p>22 May 2023</p>
+                    <p>Dotsavvy Awards</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quaerat natus doloremque sunt, veniam, iste delectus earum, possimus totam accusantium temporibus laborum quod amet! Quod totam ratione suscipit obcaecati ipsa.</p>
+                </div>
+                
+
+            </div>
+        
+
+    </div>
+</section>
+
+
+
+<?php get_footer(); ?>

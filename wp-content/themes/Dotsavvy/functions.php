@@ -133,8 +133,42 @@ add_action('init', 'create_ServiceItems_post_type');
 
 function enqueue_custom_scripts() {
     wp_enqueue_script('jquery');
-    wp_enqueue_script('custom-script', get_template_directory_uri() . '/custom-script.js', array('jquery'), null, true);
+    wp_enqueue_script('custom-script', get_template_directory_uri() . '//custom-script.js', array('jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
+// Register Custom Post Type for Carousel
+function create_carousel_post_type() {
+    $args = array(
+        'public' => true,
+        'label'  => 'Carousels',
+        'supports' => array('title', 'thumbnail'),
+        'menu_icon' => 'dashicons-format-gallery',
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'carousels'),
+    );
+    register_post_type('carousel', $args);
+}
+add_action('init', 'create_carousel_post_type');
+
+function handle_form_submission() {
+    // Check for nonce or other security checks if needed
+    
+    // Sanitize and process form data
+    $name = sanitize_text_field($_POST['name']);
+    $phone = sanitize_text_field($_POST['phone']);
+    $email = sanitize_email($_POST['email']);
+    $interest = sanitize_text_field($_POST['interest']);
+    $other = sanitize_text_field($_POST['other']);
+
+    // Process the form data (e.g., save to database, send email)
+    
+    // Redirect or display a success message
+    wp_redirect(home_url('/thank-you')); // Replace with your desired redirect URL
+    exit;
+}
+add_action('admin_post_submit_form', 'handle_form_submission');
+add_action('admin_post_nopriv_submit_form', 'handle_form_submission');
+
 
 ?>
