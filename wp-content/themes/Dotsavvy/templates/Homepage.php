@@ -232,8 +232,10 @@ endif;
             endif;
             ?>
         </div>
+        <!--
         <a class="carousel-prev" onclick="moveSlide(-1)">&#10094;</a>
         <a class="carousel-next" onclick="moveSlide(1)">&#10095;</a>
+        -->
     </div>
 </div>
             
@@ -373,31 +375,72 @@ endif;
 </section>
 
 <section>
-    <div class="relative">
-        <div>
-            <h1>ews & logs</h1>
+    <div class="relative mt-10">
+        <div class="flex items-center justify-center">
+            <h1 class="sm:text-4xl md:text-6xl">News & Blogs</h1>
         </div> 
-            <div class="flex items-center justify-between  md:gap-12 sm:gap-6 md:m-16 sm:m-8 sm:text-sm">
-                <div class="flex flex-col gap-4">
-                    <p>22 May 2023</p>
-                    <p>Dotsavvy Awards</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quaerat natus doloremque sunt, veniam, iste delectus earum, possimus totam accusantium temporibus laborum quod amet! Quod totam ratione suscipit obcaecati ipsa.</p>
-                 
-                </div>
-                <div class="flex flex-col gap-4">
-                <p>22 May 2023</p>
-                    <p>Dotsavvy Awards</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quaerat natus doloremque sunt, veniam, iste delectus earum, possimus totam accusantium temporibus laborum quod amet! Quod totam ratione suscipit obcaecati ipsa.</p>
-                </div>
-                <div class="flex flex-col gap-4">
-                <p>22 May 2023</p>
-                    <p>Dotsavvy Awards</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quaerat natus doloremque sunt, veniam, iste delectus earum, possimus totam accusantium temporibus laborum quod amet! Quod totam ratione suscipit obcaecati ipsa.</p>
-                </div>
+        <div class="flex items-center justify-between md:gap-12 sm:gap-6 md:m-16 sm:m-8 sm:text-sm">
+            <?php
+            // Query to fetch the latest 3 posts
+            $recent_posts = new WP_Query(array(
+                'posts_per_page' => 3, // Number of posts to display
+            ));
+
+            if ($recent_posts->have_posts()) :
+                while ($recent_posts->have_posts()) : $recent_posts->the_post(); ?>
+                    <div class="flex flex-col ">
+                        <p><?php echo get_the_date(); ?></p>
+                        <p class="text-2xl mt-1"><?php the_title(); ?></p>
+                        <p class="mt-6"><?php the_excerpt(); ?></p>
+                    </div>
+                <?php endwhile;
+                wp_reset_postdata();
+            else : ?>
+                <p><?php esc_html_e('No posts found.'); ?></p>
+            <?php endif; ?>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="relative">
+        <div class="grid grid-cols-2 text-white">
+            <div class="bg-red-500 flex items-center justify-center">
+                <div class="flex sm:p-12 md:p-16 flex-col items- justify-center">
+                    <div class="sm:w-3/2 md:w-3/2">
+                    
+                    <h1 class="sm:text-3xl md:text-6xl">We would love to hear from you</h1>
+                    <div class="md:w-2/3">
+                    <p class="mt-5">Feel free to reach out if you want to collaborate with us, simply have a chat.</p>
+                    </div>
+                    
+                    <p class="py-5">Become a client</p>
                 
 
+                    </div>
+          
+                </div>
+                
             </div>
-        
+            <div class="bg-black flex flex-col items-center justify-center">
+                <div>
+                    <ul>
+                    <li>Dotsavvy Limited</li>
+                    <li>Suite 25 ,Lower Duplex Apartments</li>
+                    <li>Upper Hill Road,Upper Hill</li>
+                    <li>Nairobi, Kenya</li>
+                    </ul>
+                    <div class="mt-5">
+                    <ul>
+                    <li>Email: info@dotsavvyafrica.com</li>
+                        <li>Phone: +254208077108/9</li>
+                    </ul>
+                </div>
+                </div>
+                
+            </div>
+
+        </div>
 
     </div>
 </section>
