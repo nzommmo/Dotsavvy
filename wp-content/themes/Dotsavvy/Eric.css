@@ -227,6 +227,7 @@
     background-color: #d52436; /* Background on hover */
     border-radius: 5px;
     color: white;
+    padding-inline: 30px;
 
 }
 /* Define the animation */
@@ -448,9 +449,6 @@
         width:40%;
         height: 600px; 
        
-    }
- 
-  
-  
+    } 
   
 }
