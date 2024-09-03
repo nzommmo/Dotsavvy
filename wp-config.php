@@ -37,6 +37,13 @@ define( 'DB_CHARSET', 'utf8mb4' );
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
+define('FTP_HOST', 'localhost:22'); // Use port 22 for SFTP
+define('FTP_USER', 'nzomo ');
+define('FTP_PASS', 'destiny@2578');
+define('FTP_SSL', true);
+define('FS_METHOD', 'direct');
+define( 'WPMS_ON', true );
+define( 'WPMS_SMTP_PASS', 'lkwu prze pxpb zlnn' );
 
 
 /**#@+

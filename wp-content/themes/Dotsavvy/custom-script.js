@@ -62,3 +62,67 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 // Optional: Auto-slide functionality
 setInterval(() => moveSlide(1), 3000); // Change slide every 3 seconds
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.fade-in-up');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1 // Adjust this value as needed
+    });
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const brandItems = document.querySelectorAll('.brand-item');
+
+    const observerOptions = {
+        root: null, // Use the viewport as the root
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of the section is in view
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const item = entry.target;
+                item.classList.add('visible');
+                observer.unobserve(item); // Stop observing once the animation starts
+            }
+        });
+    }, observerOptions);
+
+    brandItems.forEach((item, index) => {
+        item.style.setProperty('--animation-delay', `${index * 0.5}s`);
+        observer.observe(item);
+    });
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.querySelector('#menu'); // Your menu button
+    const menuContainer = document.querySelector('#menu-container');
+
+    menuButton.addEventListener('click', () => {
+        if (menuContainer.classList.contains('show')) {
+            menuContainer.classList.remove('show');
+            // Optionally, you can also set display to none after transition ends
+            setTimeout(() => {
+                menuContainer.style.display = 'none';
+            }, 300); // Match the transition duration
+        } else {
+            menuContainer.style.display = 'block';
+            setTimeout(() => {
+                menuContainer.classList.add('show');
+            }, 10); // Small delay to ensure display is set before transition
+        }
+    });
+});

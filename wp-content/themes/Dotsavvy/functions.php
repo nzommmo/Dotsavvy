@@ -21,7 +21,7 @@ add_action('wp_enqueue_scripts', 'test_theme_register_styles');
 
 function test_theme_menus(){
     $locations = array(
-        'primary' => "Desktop Primary Left Sidebar",
+        'primary' => "Main Menu",
         'footer' => "Footer Menu Items",
     );
     register_nav_menus($locations);
@@ -151,24 +151,43 @@ function create_carousel_post_type() {
 }
 add_action('init', 'create_carousel_post_type');
 
-function handle_form_submission() {
-    // Check for nonce or other security checks if needed
-    
-    // Sanitize and process form data
-    $name = sanitize_text_field($_POST['name']);
-    $phone = sanitize_text_field($_POST['phone']);
-    $email = sanitize_email($_POST['email']);
-    $interest = sanitize_text_field($_POST['interest']);
-    $other = sanitize_text_field($_POST['other']);
+function handle_contact_form_submission() {
+    // Check that the form is submitted via POST
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        
+        // Sanitize and retrieve form data
+        $name = sanitize_text_field($_POST['name']);
+        $phone = sanitize_text_field($_POST['phone']);
+        $email = sanitize_email($_POST['email']);
+        $interest = sanitize_text_field($_POST['interest']);
+        $other = sanitize_text_field($_POST['other']);
+        
+        // Prepare the email content
+        $subject = 'New Contact Form Submission';
+        $message = "Name: $name\n";
+        $message .= "Phone: $phone\n";
+        $message .= "Email: $email\n";
+        $message .= "Interest: $interest\n";
+        if (!empty($other)) {
+            $message .= "Other: $other\n";
+        }
 
-    // Process the form data (e.g., save to database, send email)
-    
-    // Redirect or display a success message
-    wp_redirect(home_url('/thank-you')); // Replace with your desired redirect URL
-    exit;
+        // Set the recipient email address
+        $to = 'ericnzomo17@gmail.com'; // Replace with your email address
+
+        // Set the email headers
+        $headers = array('Content-Type: text/plain; charset=UTF-8');
+
+        // Send the email
+        wp_mail($to, $subject, $message, $headers);
+
+        // Redirect to a thank you page or back to the form page
+        wp_redirect(home_url('/index.php/thank-you')); // Replace with your thank-you page URL
+        exit;
+    }
 }
-add_action('admin_post_submit_form', 'handle_form_submission');
-add_action('admin_post_nopriv_submit_form', 'handle_form_submission');
+add_action('admin_post_nopriv_submit_form', 'handle_contact_form_submission');
+add_action('admin_post_submit_form', 'handle_contact_form_submission');
 
 
 ?>
