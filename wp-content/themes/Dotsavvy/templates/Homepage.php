@@ -15,22 +15,23 @@ get_header(); ?>
                 ?>
                 <img id="logo" src="<?php echo $logo[0]; ?>" alt="logo" class="">
             </div>
-            <div class="">
-                <img id="menu" src="wp-content/themes/Dotsavvy/assets/images/Rectangle 3 copy 22.png" alt="" class="">
-            </div>
-            
+            <div>
+    <img id="menu" src="wp-content/themes/Dotsavvy/assets/images/Rectangle 3 copy 22.png" alt="" class="cursor-pointer">
+</div>
+
 <nav id="menu-container" class="hidden">
-<?php
-$menu_name = 'Navbar'; // Replace with your menu slug
+    <?php
+    $menu_name = 'Navbar'; // Replace with your menu slug
 
-wp_nav_menu(array(
-    'menu' => $menu_name,
-    'container' => 'div',
-    'container_class' => 'ERIC', // Optional: Add a custom class for styling
-    'menu_class' => 'your-menu-class', // Optional: Add a custom class for styling
+    wp_nav_menu(array(
+        'menu' => $menu_name,
+        'container' => 'div',
+        'container_class' => 'ERIC', // Optional: Add a custom class for styling
+        'menu_class' => 'your-menu-class', // Optional: Add a custom class for styling
+    ));
+    ?>
+</nav>
 
-));
-?>
 
 </nav>
 <script>

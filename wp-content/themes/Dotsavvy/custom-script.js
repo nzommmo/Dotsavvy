@@ -108,13 +108,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 document.addEventListener('DOMContentLoaded', () => {
-    const menuButton = document.querySelector('#menu'); // Your menu button
-    const menuContainer = document.querySelector('#menu-container');
+    const menuButton = document.querySelector('#menu'); // The menu button (image)
+    const menuContainer = document.querySelector('#menu-container'); // The menu container
 
-    menuButton.addEventListener('click', () => {
+    // Toggle the menu when the button is clicked
+    menuButton.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevent the click from triggering the document event
         if (menuContainer.classList.contains('show')) {
             menuContainer.classList.remove('show');
-            // Optionally, you can also set display to none after transition ends
             setTimeout(() => {
                 menuContainer.style.display = 'none';
             }, 300); // Match the transition duration
@@ -123,6 +124,18 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 menuContainer.classList.add('show');
             }, 10); // Small delay to ensure display is set before transition
+        }
+    });
+
+    // Hide the menu when clicking outside of it
+    document.addEventListener('click', (event) => {
+        if (!menuContainer.contains(event.target) && !menuButton.contains(event.target)) {
+            if (menuContainer.classList.contains('show')) {
+                menuContainer.classList.remove('show');
+                setTimeout(() => {
+                    menuContainer.style.display = 'none';
+                }, 300); // Match the transition duration
+            }
         }
     });
 });
