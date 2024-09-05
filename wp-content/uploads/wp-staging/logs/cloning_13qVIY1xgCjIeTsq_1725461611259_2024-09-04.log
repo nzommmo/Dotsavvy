@@ -1,0 +1,278 @@
+[INFO]-[2024/09/04 14:53:32] #################### Start Cloning Job ####################
+[info]-[2024/09/04 14:53:32] WP Staging Version: 3.8.4
+[info]-[2024/09/04 14:53:32] PHP Version: 8.0.30
+[info]-[2024/09/04 14:53:32] Server: Apache/2.4.58 (Unix) OpenSSL/1.1.1w PHP/8.0.30 mod_perl/2.0.12 Perl/v5.34.1
+[info]-[2024/09/04 14:53:32] MySQL: 10.4.32
+[info]-[2024/09/04 14:53:32] WP Version: 6.6.1
+[info]-[2024/09/04 14:53:32] Host: General
+[info]-[2024/09/04 14:53:32] PHP Memory Limit: 536870912
+[info]-[2024/09/04 14:53:32] WP Memory Limit: 41943040
+[info]-[2024/09/04 14:53:32] PHP Max Execution Time: 120
+[info]-[2024/09/04 14:53:32] Installed Plugins And Themes
+[info]-[2024/09/04 14:53:32] Activated Plugins
+[INFO_SUB]-[2024/09/04 14:53:32] - WP STAGING WordPress Backup Plugin - Backup Duplicator &amp; Migration : 3.8.4
+[info]-[2024/09/04 14:53:32] Inactive Plugins
+[INFO_SUB]-[2024/09/04 14:53:32] - Akismet Anti-spam: Spam Protection : 5.3.3
+[INFO_SUB]-[2024/09/04 14:53:32] - Classic Editor : 1.6.4
+[INFO_SUB]-[2024/09/04 14:53:32] - Contact Form 7 : 5.9.8
+[INFO_SUB]-[2024/09/04 14:53:32] - Hello Dolly : 1.7.2
+[INFO_SUB]-[2024/09/04 14:53:32] - WPForms Lite : 1.9.0.4
+[INFO_SUB]-[2024/09/04 14:53:32] - WP Mail SMTP : 4.1.1
+[info]-[2024/09/04 14:53:32] Activated Theme
+[INFO_SUB]-[2024/09/04 14:53:32] - Dotsavvy : 1.0
+[info]-[2024/09/04 14:53:32] Inactive Themes
+[INFO_SUB]-[2024/09/04 14:53:32] - Twenty Twenty-Four : 1.2
+[INFO_SUB]-[2024/09/04 14:53:32] - Twenty Twenty-Three : 1.5
+[INFO_SUB]-[2024/09/04 14:53:32] - Twenty Twenty-Two : 1.8
+[INFO]-[2024/09/04 14:53:33] DB Copy: Creating table wpstg0_actionscheduler_actions
+[INFO]-[2024/09/04 14:53:33] DB Copy: Table wp_actionscheduler_actions contains 8 rows 
+[INFO]-[2024/09/04 14:53:33] DB Copy: Copy data from wp_actionscheduler_actions to wpstg0_actionscheduler_actions - 0 to 10000 records
+[INFO]-[2024/09/04 14:53:34] DB Copy: Creating table wpstg0_actionscheduler_claims
+[INFO]-[2024/09/04 14:53:34] DB Copy: Table wp_actionscheduler_claims contains 0 rows 
+[INFO]-[2024/09/04 14:53:35] DB Copy: Creating table wpstg0_actionscheduler_groups
+[INFO]-[2024/09/04 14:53:35] DB Copy: Table wp_actionscheduler_groups contains 3 rows 
+[INFO]-[2024/09/04 14:53:35] DB Copy: Copy data from wp_actionscheduler_groups to wpstg0_actionscheduler_groups - 0 to 10000 records
+[INFO]-[2024/09/04 14:53:36] DB Copy: Creating table wpstg0_actionscheduler_logs
+[INFO]-[2024/09/04 14:53:37] DB Copy: Table wp_actionscheduler_logs contains 20 rows 
+[INFO]-[2024/09/04 14:53:37] DB Copy: Copy data from wp_actionscheduler_logs to wpstg0_actionscheduler_logs - 0 to 10000 records
+[INFO]-[2024/09/04 14:53:38] DB Copy: Creating table wpstg0_commentmeta
+[INFO]-[2024/09/04 14:53:39] DB Copy: Table wp_commentmeta contains 0 rows 
+[INFO]-[2024/09/04 14:53:40] DB Copy: Creating table wpstg0_comments
+[INFO]-[2024/09/04 14:53:40] DB Copy: Table wp_comments contains 1 rows 
+[INFO]-[2024/09/04 14:53:40] DB Copy: Copy data from wp_comments to wpstg0_comments - 0 to 10000 records
+[INFO]-[2024/09/04 14:53:41] DB Copy: Creating table wpstg0_experience_data
+[INFO]-[2024/09/04 14:53:41] DB Copy: Table wp_experience_data contains 2 rows 
+[INFO]-[2024/09/04 14:53:41] DB Copy: Copy data from wp_experience_data to wpstg0_experience_data - 0 to 10000 records
+[INFO]-[2024/09/04 14:53:43] DB Copy: Creating table wpstg0_form_submissions
+[INFO]-[2024/09/04 14:53:43] DB Copy: Table wp_form_submissions contains 0 rows 
+[INFO]-[2024/09/04 14:53:44] DB Copy: Creating table wpstg0_links
+[INFO]-[2024/09/04 14:53:45] DB Copy: Table wp_links contains 0 rows 
+[INFO]-[2024/09/04 14:53:45] DB Copy: Creating table wpstg0_options
+[INFO]-[2024/09/04 14:53:46] DB Copy: Table wp_options contains 240 rows 
+[INFO]-[2024/09/04 14:53:46] DB Copy: Copy data from wp_options to wpstg0_options - 0 to 10000 records
+[INFO]-[2024/09/04 14:53:49] DB Copy: Creating table wpstg0_postmeta
+[INFO]-[2024/09/04 14:53:49] DB Copy: Table wp_postmeta contains 205 rows 
+[INFO]-[2024/09/04 14:53:49] DB Copy: Copy data from wp_postmeta to wpstg0_postmeta - 0 to 10000 records
+[INFO]-[2024/09/04 14:53:50] DB Copy: Creating table wpstg0_posts
+[INFO]-[2024/09/04 14:53:51] DB Copy: Table wp_posts contains 103 rows 
+[INFO]-[2024/09/04 14:53:51] DB Copy: Copy data from wp_posts to wpstg0_posts - 0 to 10000 records
+[INFO]-[2024/09/04 14:53:52] DB Copy: Creating table wpstg0_term_relationships
+[INFO]-[2024/09/04 14:53:52] DB Copy: Table wp_term_relationships contains 9 rows 
+[INFO]-[2024/09/04 14:53:52] DB Copy: Copy data from wp_term_relationships to wpstg0_term_relationships - 0 to 10000 records
+[INFO]-[2024/09/04 14:53:53] DB Copy: Creating table wpstg0_term_taxonomy
+[INFO]-[2024/09/04 14:53:54] DB Copy: Table wp_term_taxonomy contains 2 rows 
+[INFO]-[2024/09/04 14:53:54] DB Copy: Copy data from wp_term_taxonomy to wpstg0_term_taxonomy - 0 to 10000 records
+[INFO]-[2024/09/04 14:53:54] DB Copy: Creating table wpstg0_termmeta
+[INFO]-[2024/09/04 14:53:55] DB Copy: Table wp_termmeta contains 0 rows 
+[INFO]-[2024/09/04 14:53:56] DB Copy: Creating table wpstg0_terms
+[INFO]-[2024/09/04 14:53:56] DB Copy: Table wp_terms contains 2 rows 
+[INFO]-[2024/09/04 14:53:56] DB Copy: Copy data from wp_terms to wpstg0_terms - 0 to 10000 records
+[INFO]-[2024/09/04 14:53:57] DB Copy: Creating table wpstg0_usermeta
+[INFO]-[2024/09/04 14:53:57] DB Copy: Table wp_usermeta contains 30 rows 
+[INFO]-[2024/09/04 14:53:57] DB Copy: Copy data from wp_usermeta to wpstg0_usermeta - 0 to 10000 records
+[INFO]-[2024/09/04 14:53:58] DB Copy: Creating table wpstg0_users
+[INFO]-[2024/09/04 14:53:58] DB Copy: Table wp_users contains 1 rows 
+[INFO]-[2024/09/04 14:53:58] DB Copy: Copy data from wp_users to wpstg0_users - 0 to 10000 records
+[INFO]-[2024/09/04 14:53:59] DB Copy: Creating table wpstg0_wpforms_logs
+[INFO]-[2024/09/04 14:53:59] DB Copy: Table wp_wpforms_logs contains 0 rows 
+[INFO]-[2024/09/04 14:54:00] DB Copy: Creating table wpstg0_wpforms_payment_meta
+[INFO]-[2024/09/04 14:54:01] DB Copy: Table wp_wpforms_payment_meta contains 0 rows 
+[INFO]-[2024/09/04 14:54:01] DB Copy: Creating table wpstg0_wpforms_payments
+[INFO]-[2024/09/04 14:54:02] DB Copy: Table wp_wpforms_payments contains 0 rows 
+[INFO]-[2024/09/04 14:54:02] DB Copy: Creating table wpstg0_wpforms_tasks_meta
+[INFO]-[2024/09/04 14:54:03] DB Copy: Table wp_wpforms_tasks_meta contains 4 rows 
+[INFO]-[2024/09/04 14:54:03] DB Copy: Copy data from wp_wpforms_tasks_meta to wpstg0_wpforms_tasks_meta - 0 to 10000 records
+[INFO]-[2024/09/04 14:54:03] DB Copy: Creating table wpstg0_wpmailsmtp_debug_events
+[INFO]-[2024/09/04 14:54:04] DB Copy: Table wp_wpmailsmtp_debug_events contains 23 rows 
+[INFO]-[2024/09/04 14:54:04] DB Copy: Copy data from wp_wpmailsmtp_debug_events to wpstg0_wpmailsmtp_debug_events - 0 to 10000 records
+[INFO]-[2024/09/04 14:54:04] DB Copy: Creating table wpstg0_wpmailsmtp_tasks_meta
+[INFO]-[2024/09/04 14:54:05] DB Copy: Table wp_wpmailsmtp_tasks_meta contains 1 rows 
+[INFO]-[2024/09/04 14:54:05] DB Copy: Copy data from wp_wpmailsmtp_tasks_meta to wpstg0_wpmailsmtp_tasks_meta - 0 to 10000 records
+[INFO]-[2024/09/04 14:54:07] DB Search &amp; Replace:  Table wpstg0_actionscheduler_actions 0 to 20000 records
+[INFO]-[2024/09/04 14:54:08] DB Search &amp; Replace:  Table wpstg0_actionscheduler_groups 0 to 20000 records
+[INFO]-[2024/09/04 14:54:08] DB Search &amp; Replace:  Table wpstg0_actionscheduler_logs 0 to 20000 records
+[INFO]-[2024/09/04 14:54:09] DB Search &amp; Replace:  Table wpstg0_comments 0 to 20000 records
+[INFO]-[2024/09/04 14:54:10] DB Search &amp; Replace:  Table wpstg0_experience_data 0 to 20000 records
+[INFO]-[2024/09/04 14:54:12] DB Search &amp; Replace:  Table wpstg0_options 0 to 20000 records
+[INFO]-[2024/09/04 14:54:12] DB Search &amp; Replace:  Table wpstg0_postmeta 0 to 20000 records
+[INFO]-[2024/09/04 14:54:13] DB Search &amp; Replace:  Table wpstg0_posts 0 to 20000 records
+[INFO]-[2024/09/04 14:54:14] DB Search &amp; Replace:  Table wpstg0_term_relationships 0 to 20000 records
+[INFO]-[2024/09/04 14:54:14] DB Search &amp; Replace:  Table wpstg0_term_taxonomy 0 to 20000 records
+[INFO]-[2024/09/04 14:54:15] DB Search &amp; Replace:  Table wpstg0_terms 0 to 20000 records
+[INFO]-[2024/09/04 14:54:16] DB Search &amp; Replace:  Table wpstg0_usermeta 0 to 20000 records
+[INFO]-[2024/09/04 14:54:17] DB Search &amp; Replace:  Table wpstg0_users 0 to 20000 records
+[INFO]-[2024/09/04 14:54:19] DB Search &amp; Replace:  Table wpstg0_wpforms_tasks_meta 0 to 20000 records
+[INFO]-[2024/09/04 14:54:19] DB Search &amp; Replace:  Table wpstg0_wpmailsmtp_debug_events 0 to 20000 records
+[INFO]-[2024/09/04 14:54:20] DB Search &amp; Replace:  Table wpstg0_wpmailsmtp_tasks_meta 0 to 20000 records
+[INFO]-[2024/09/04 14:54:22] Scanning / and its files
+[INFO]-[2024/09/04 14:54:22] Scanning wp-content/plugins/, its sub-directories and files
+[INFO]-[2024/09/04 14:54:24] Scanning wp-content/mu-plugins/, its sub-directories and files
+[INFO]-[2024/09/04 14:54:25] Scanning wp-content/themes/, its sub-directories and files
+[INFO]-[2024/09/04 14:54:25] Scanning wp-content/uploads/, its sub-directories and files
+[INFO]-[2024/09/04 14:54:26] Scanning wp-content/ for other directories and files
+[INFO]-[2024/09/04 14:54:27] Scanning wp-includes/, its sub-directories and files
+[INFO]-[2024/09/04 14:54:28] Scanning wp-admin/, its sub-directories and files
+[INFO]-[2024/09/04 14:54:30] Copying files...
+[INFO]-[2024/09/04 14:54:30] Total 50 files processed
+[INFO]-[2024/09/04 14:54:30] Total 100 files processed
+[INFO]-[2024/09/04 14:54:31] Total 150 files processed
+[INFO]-[2024/09/04 14:54:32] Total 200 files processed
+[INFO]-[2024/09/04 14:54:32] Total 250 files processed
+[INFO]-[2024/09/04 14:54:33] Total 300 files processed
+[INFO]-[2024/09/04 14:54:34] Total 350 files processed
+[INFO]-[2024/09/04 14:54:35] Total 400 files processed
+[INFO]-[2024/09/04 14:54:35] Total 450 files processed
+[INFO]-[2024/09/04 14:54:36] Total 500 files processed
+[INFO]-[2024/09/04 14:54:37] Total 550 files processed
+[INFO]-[2024/09/04 14:54:38] Total 600 files processed
+[INFO]-[2024/09/04 14:54:39] Total 650 files processed
+[INFO]-[2024/09/04 14:54:40] Total 700 files processed
+[INFO]-[2024/09/04 14:54:41] Total 750 files processed
+[INFO]-[2024/09/04 14:54:42] Total 800 files processed
+[INFO]-[2024/09/04 14:54:44] Total 850 files processed
+[INFO]-[2024/09/04 14:54:44] Total 900 files processed
+[INFO]-[2024/09/04 14:54:45] Total 950 files processed
+[INFO]-[2024/09/04 14:54:46] Total 1000 files processed
+[INFO]-[2024/09/04 14:54:47] Total 1050 files processed
+[INFO]-[2024/09/04 14:54:47] Total 1100 files processed
+[INFO]-[2024/09/04 14:54:48] Total 1150 files processed
+[INFO]-[2024/09/04 14:54:49] Total 1200 files processed
+[INFO]-[2024/09/04 14:54:49] Total 1250 files processed
+[INFO]-[2024/09/04 14:54:50] Total 1300 files processed
+[INFO]-[2024/09/04 14:54:51] Total 1350 files processed
+[INFO]-[2024/09/04 14:54:51] Total 1400 files processed
+[INFO]-[2024/09/04 14:54:53] Total 1450 files processed
+[INFO]-[2024/09/04 14:54:55] Total 1500 files processed
+[INFO]-[2024/09/04 14:54:56] Total 1550 files processed
+[INFO]-[2024/09/04 14:54:57] Total 1600 files processed
+[INFO]-[2024/09/04 14:54:57] Total 1650 files processed
+[INFO]-[2024/09/04 14:54:58] Total 1700 files processed
+[INFO]-[2024/09/04 14:54:58] Total 1750 files processed
+[INFO]-[2024/09/04 14:54:59] Total 1800 files processed
+[INFO]-[2024/09/04 14:55:00] Total 1850 files processed
+[INFO]-[2024/09/04 14:55:00] Total 1900 files processed
+[INFO]-[2024/09/04 14:55:01] Total 1950 files processed
+[INFO]-[2024/09/04 14:55:02] Total 2000 files processed
+[INFO]-[2024/09/04 14:55:02] Total 2050 files processed
+[INFO]-[2024/09/04 14:55:03] Total 2100 files processed
+[INFO]-[2024/09/04 14:55:04] Total 2150 files processed
+[INFO]-[2024/09/04 14:55:04] Total 2200 files processed
+[INFO]-[2024/09/04 14:55:05] Total 2250 files processed
+[INFO]-[2024/09/04 14:55:06] Total 2300 files processed
+[INFO]-[2024/09/04 14:55:06] Total 2350 files processed
+[INFO]-[2024/09/04 14:55:07] Total 2400 files processed
+[INFO]-[2024/09/04 14:55:08] Total 2450 files processed
+[INFO]-[2024/09/04 14:55:08] Total 2500 files processed
+[INFO]-[2024/09/04 14:55:09] Total 2550 files processed
+[INFO]-[2024/09/04 14:55:10] Total 2600 files processed
+[INFO]-[2024/09/04 14:55:10] Total 2650 files processed
+[INFO]-[2024/09/04 14:55:11] Total 2700 files processed
+[INFO]-[2024/09/04 14:55:12] Total 2750 files processed
+[INFO]-[2024/09/04 14:55:12] Total 2800 files processed
+[INFO]-[2024/09/04 14:55:13] Total 2850 files processed
+[INFO]-[2024/09/04 14:55:13] Total 2900 files processed
+[INFO]-[2024/09/04 14:55:14] Total 2950 files processed
+[INFO]-[2024/09/04 14:55:15] Total 3000 files processed
+[INFO]-[2024/09/04 14:55:15] Total 3050 files processed
+[INFO]-[2024/09/04 14:55:16] Total 3100 files processed
+[INFO]-[2024/09/04 14:55:16] Total 3150 files processed
+[INFO]-[2024/09/04 14:55:17] Total 3200 files processed
+[INFO]-[2024/09/04 14:55:17] Total 3250 files processed
+[INFO]-[2024/09/04 14:55:18] Total 3300 files processed
+[INFO]-[2024/09/04 14:55:19] Total 3350 files processed
+[INFO]-[2024/09/04 14:55:19] Total 3400 files processed
+[INFO]-[2024/09/04 14:55:20] Total 3450 files processed
+[INFO]-[2024/09/04 14:55:20] Total 3500 files processed
+[INFO]-[2024/09/04 14:55:21] Total 3550 files processed
+[INFO]-[2024/09/04 14:55:22] Total 3600 files processed
+[INFO]-[2024/09/04 14:55:22] Total 3650 files processed
+[INFO]-[2024/09/04 14:55:23] Total 3700 files processed
+[INFO]-[2024/09/04 14:55:24] Total 3750 files processed
+[INFO]-[2024/09/04 14:55:25] Total 3800 files processed
+[INFO]-[2024/09/04 14:55:25] Total 3850 files processed
+[INFO]-[2024/09/04 14:55:26] Total 3900 files processed
+[INFO]-[2024/09/04 14:55:27] Total 3950 files processed
+[INFO]-[2024/09/04 14:55:27] Total 4000 files processed
+[INFO]-[2024/09/04 14:55:28] Total 4050 files processed
+[INFO]-[2024/09/04 14:55:30] Total 4100 files processed
+[INFO]-[2024/09/04 14:55:30] Total 4150 files processed
+[INFO]-[2024/09/04 14:55:31] Total 4200 files processed
+[INFO]-[2024/09/04 14:55:32] Total 4250 files processed
+[INFO]-[2024/09/04 14:55:32] Total 4300 files processed
+[INFO]-[2024/09/04 14:55:33] Total 4350 files processed
+[INFO]-[2024/09/04 14:55:34] Total 4400 files processed
+[INFO]-[2024/09/04 14:55:35] Total 4450 files processed
+[INFO]-[2024/09/04 14:55:35] Total 4500 files processed
+[INFO]-[2024/09/04 14:55:36] Total 4550 files processed
+[INFO]-[2024/09/04 14:55:37] Total 4600 files processed
+[INFO]-[2024/09/04 14:55:37] Total 4650 files processed
+[INFO]-[2024/09/04 14:55:39] Total 4700 files processed
+[INFO]-[2024/09/04 14:55:40] Total 4750 files processed
+[INFO]-[2024/09/04 14:55:42] Total 4800 files processed
+[INFO]-[2024/09/04 14:55:44] Total 4850 files processed
+[INFO]-[2024/09/04 14:55:45] Total 4900 files processed
+[INFO]-[2024/09/04 14:55:46] Total 4950 files processed
+[INFO]-[2024/09/04 14:55:48] Total 5000 files processed
+[INFO]-[2024/09/04 14:55:49] Total 5050 files processed
+[INFO]-[2024/09/04 14:55:50] Total 5100 files processed
+[INFO]-[2024/09/04 14:55:50] Total 5150 files processed
+[INFO]-[2024/09/04 14:55:51] Total 5200 files processed
+[INFO]-[2024/09/04 14:55:52] Total 5250 files processed
+[INFO]-[2024/09/04 14:55:52] Total 5300 files processed
+[INFO]-[2024/09/04 14:55:53] Total 5350 files processed
+[INFO]-[2024/09/04 14:55:54] Total 5400 files processed
+[INFO]-[2024/09/04 14:55:55] Total 5450 files processed
+[INFO]-[2024/09/04 14:55:56] Total 5500 files processed
+[INFO]-[2024/09/04 14:55:57] Total 5550 files processed
+[INFO]-[2024/09/04 14:55:57] Total 5600 files processed
+[INFO]-[2024/09/04 14:55:58] Total 5650 files processed
+[INFO]-[2024/09/04 14:55:58] Total 5700 files processed
+[INFO]-[2024/09/04 14:55:59] Total 5750 files processed
+[INFO]-[2024/09/04 14:56:00] Total 5800 files processed
+[INFO]-[2024/09/04 14:56:00] Total 5850 files processed
+[INFO]-[2024/09/04 14:56:01] Total 5900 files processed
+[INFO]-[2024/09/04 14:56:02] Total 5950 files processed
+[INFO]-[2024/09/04 14:56:02] Total 6000 files processed
+[INFO]-[2024/09/04 14:56:03] Total 6050 files processed
+[INFO]-[2024/09/04 14:56:04] Total 6100 files processed
+[INFO]-[2024/09/04 14:56:04] Total 6150 files processed
+[INFO]-[2024/09/04 14:56:05] Total 6200 files processed
+[INFO]-[2024/09/04 14:56:06] Total 6250 files processed
+[INFO]-[2024/09/04 14:56:07] Total 6300 files processed
+[INFO]-[2024/09/04 14:56:07] Total 6350 files processed
+[INFO]-[2024/09/04 14:56:08] Total 6400 files processed
+[INFO]-[2024/09/04 14:56:09] Total 6450 files processed
+[INFO]-[2024/09/04 14:56:09] Total 6500 files processed
+[INFO]-[2024/09/04 14:56:10] Total 6550 files processed
+[INFO]-[2024/09/04 14:56:11] Total 6600 files processed
+[INFO]-[2024/09/04 14:56:11] Total 6650 files processed
+[INFO]-[2024/09/04 14:56:12] Total 6700 files processed
+[INFO]-[2024/09/04 14:56:12] Total 6750 files processed
+[INFO]-[2024/09/04 14:56:14] Skipped symlinking WP Uploads Folder
+[INFO]-[2024/09/04 14:56:14] Copying files finished
+[INFO]-[2024/09/04 14:56:14] DB Data Step 0: Copy wp-config.php file
+[INFO]-[2024/09/04 14:56:14] DB Data Step 0: Skipping: wp-config.php already exists in /opt/lampp/htdocs/Dotsavvy/dotsavvytest/wp-config.php
+[INFO]-[2024/09/04 14:56:15] DB Data Step 1: Updating siteurl and homeurl in wpstg0_options to http://localhost/Dotsavvy/dotsavvytest
+[INFO]-[2024/09/04 14:56:17] DB Data Step 3: Updating db prefix in wpstg0_usermeta.
+[INFO]-[2024/09/04 14:56:18] DB Data Step 4: Updating table_prefix in /opt/lampp/htdocs/Dotsavvy/dotsavvytest/wp-config.php to wpstg0_
+[INFO]-[2024/09/04 14:56:19] DB Data Step 5: WP installation is not in a subdirectory! Skipping this step
+[INFO]-[2024/09/04 14:56:19] DB Data Step 6: Updating db prefix in wpstg0_options.
+[INFO]-[2024/09/04 14:56:20] DB Data Step 7: Updating constants in wp-config.php
+[INFO]-[2024/09/04 14:56:20] DB Data Step 7: Added constant:WP_LANG_DIR
+[INFO]-[2024/09/04 14:56:20] DB Data Step 7: Added constant:WP_HOME
+[INFO]-[2024/09/04 14:56:20] DB Data Step 7: Added constant:WP_SITEURL
+[INFO]-[2024/09/04 14:56:20] DB Data Step 7: Added constant:WP_CACHE
+[INFO]-[2024/09/04 14:56:20] DB Data Step 7: Added constant:DISABLE_WP_CRON
+[INFO]-[2024/09/04 14:56:20] DB Data Step 7: Added constant:WP_ENVIRONMENT_TYPE
+[INFO]-[2024/09/04 14:56:20] DB Data Step 7: Added constant:WP_DEVELOPMENT_MODE
+[INFO]-[2024/09/04 14:56:20] DB Data Step 7: Added constant:WPSTAGING_DEV_SITE
+[INFO]-[2024/09/04 14:56:20] DB Data Step 7: Added constant:UPLOADS
+[INFO]-[2024/09/04 14:56:20] DB Data Step 7: Added constant:WP_PLUGIN_DIR
+[INFO]-[2024/09/04 14:56:20] DB Data Step 7: Added constant:WP_PLUGIN_URL
+[INFO]-[2024/09/04 14:56:20] DB Data Step 7: Skipping: WP_ALLOW_MULTISITE not defined in wp-config.php.
+[INFO]-[2024/09/04 14:56:20] DB Data Step 7: Skipping: MULTISITE not defined in wp-config.php.
+[INFO]-[2024/09/04 14:56:22] Finish: Deleting clone job's cache files...
+[INFO]-[2024/09/04 14:56:22] Finish: Clone job's cache files have been deleted!
+[INFO]-[2024/09/04 14:56:22] Finish: Verifying existing clones...
+[INFO]-[2024/09/04 14:56:22] Finish: The job finished!
+[info]-[2024/09/04 14:56:22] ################## FINISH ##################

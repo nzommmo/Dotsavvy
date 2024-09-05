@@ -150,7 +150,6 @@ function create_carousel_post_type() {
     register_post_type('carousel', $args);
 }
 add_action('init', 'create_carousel_post_type');
-
 function handle_contact_form_submission() {
     // Check that the form is submitted via POST
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -181,8 +180,9 @@ function handle_contact_form_submission() {
         // Send the email
         wp_mail($to, $subject, $message, $headers);
 
-        // Redirect to a thank you page or back to the form page
-        wp_redirect(home_url('/index.php/thank-you')); // Replace with your thank-you page URL
+        // Set a flag to show the success message
+        $url = add_query_arg('submitted', 'true', home_url('/')); // Replace with your form page URL
+        wp_redirect($url);
         exit;
     }
 }

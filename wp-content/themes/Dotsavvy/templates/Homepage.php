@@ -326,39 +326,45 @@ endif;
  </section>
 
 <section>
-    <div class="relative">
+<div class="relative">
         <div id="form" class="flex items-center justify-center">
-            <div class=" ">
+            <div class="">
+                <!-- Check if the form was submitted and show the success message -->
+                <?php if (isset($_GET['submitted']) && $_GET['submitted'] == 'true') : ?>
+                    <div id="successMessage" class="bg-green-500 text-white p-4 rounded-md mb-5">
+                        Thank you! Your message has been sent.
+                    </div>
+                <?php endif; ?>
+
                 <h1 class="text-white sm:text-3xl text-lg">How can we help?</h1>
                 <form id="contactForm" action="<?php echo admin_url('admin-post.php'); ?>" method="post" class="pt-5 flex flex-col w-full">
-    <input type="hidden" name="action" value="submit_form">
-    <div class="flex gap-6 justify-between">
-        <input type="text" name="name" class="w-1/2 md:full sm:full bg-transparent p-1 border border-neutral-500 rounded-md text-white" placeholder="Name" required>
-        <input type="text" name="phone" class="w-1/2 md:full sm:full bg-transparent p-1 border border-neutral-500 rounded-md" placeholder="Phone" required>
-    </div>
-    <div class="mt-5">
-        <input type="email" name="email" class="w-full bg-transparent p-1 border border-neutral-500 rounded-md" placeholder="Email" required>
-    </div>
-    <div class="mt-8 text-white"> 
-        <h1 class="text-3xl">I'm interested in...</h1>
-        <div class="mt-3 flex flex-wrap md:gap-8 sm:gap-5 gap-3 text-xs">
-            <button type="button" class="interest-button" data-value="UI/UX">UI/UX</button>
-            <button type="button" class="interest-button" data-value="Mobile App Design">Mobile App Design</button>
-            <button type="button" class="interest-button" data-value="Email Marketing">Email Marketing</button>
-            <button type="button" class="interest-button" data-value="Social Media Mgt">Social Media Mgt</button>
-        </div>
-        <input type="hidden" name="interest" id="interestField" value="">
-        <div class="flex mt-5">
-            <div class="flex gap-4">
-                <input type="text" name="other" class="w-1/2 bg-transparent p-1 border border-neutral-500 rounded-md" placeholder="Other. Type Here">
-                <input type="hidden" name="action" value="submit_form">
-                <button class="bg-red-500 px-8 py-1 rounded-sm" type="submit">Submit</button>
+                    <input type="hidden" name="action" value="submit_form">
+                    <div class="flex gap-6 justify-between">
+                        <input type="text" name="name" class="w-1/2 md:full sm:full bg-transparent p-1 border border-neutral-500 rounded-md text-white" placeholder="Name" required>
+                        <input type="text" name="phone" class="w-1/2 md:full sm:full bg-transparent p-1 border border-neutral-500 rounded-md" placeholder="Phone" required>
+                    </div>
+                    <div class="mt-5">
+                        <input type="email" name="email" class="w-full bg-transparent p-1 border border-neutral-500 rounded-md" placeholder="Email" required>
+                    </div>
+                    <div class="mt-8 text-white">
+                        <h1 class="text-3xl">I'm interested in...</h1>
+                        <div class="mt-3 flex flex-wrap md:gap-8 sm:gap-5 gap-3 text-xs">
+                            <button type="button" class="interest-button" data-value="UI/UX">UI/UX</button>
+                            <button type="button" class="interest-button" data-value="Mobile App Design">Mobile App Design</button>
+                            <button type="button" class="interest-button" data-value="Email Marketing">Email Marketing</button>
+                            <button type="button" class="interest-button" data-value="Social Media Mgt">Social Media Mgt</button>
+                        </div>
+                        <input type="hidden" name="interest" id="interestField" value="">
+                        <div class="flex mt-5">
+                            <input type="text" name="other" class="w-1/2 bg-transparent p-1 border border-neutral-500 rounded-md" placeholder="Other. Type Here">
+                            <button class="bg-red-500 px-8 py-1 rounded-sm" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-</form>
-
-<script>
+    <script>
     document.addEventListener('DOMContentLoaded', () => {
         const buttons = document.querySelectorAll('.interest-button');
         const interestField = document.getElementById('interestField');
@@ -375,6 +381,19 @@ endif;
                 interestField.value = button.getAttribute('data-value');
             });
         });
+
+        // Automatically hide the success message after 3 seconds
+        const successMessage = document.getElementById('successMessage');
+        if (successMessage) {
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+
+                // Remove 'submitted' query parameter from URL
+                const url = new URL(window.location.href);
+                url.searchParams.delete('submitted');
+                window.history.replaceState({}, document.title, url.toString());
+            }, 3000); // 3000ms = 3 seconds
+        }
     });
 </script>
 
