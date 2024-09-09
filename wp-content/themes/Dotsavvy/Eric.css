@@ -1,8 +1,21 @@
 :root{
     color-scheme: light;
 }
-
-
+body{
+font-family: aktiv-grotesk, sans-serif;
+font-style: normal;
+font-weight: 200;
+}
+h1{
+    font-family: aktiv-grotesk, sans-serif;
+font-style: medium;
+font-weight: 400;
+}
+p,li,h2{
+    font-family: aktiv-grotesk, sans-serif;
+font-style: regular;
+font-weight: 200;
+}
 
 #hero {
     background-size: cover;
@@ -19,7 +32,14 @@
     z-index: 10; /* Make sure the text is on top of the images */
     color: white;
     left: 0;
+    font-family: aktiv-grotesk, sans-serif;
+
+    font-weight: 400;
+    font-style: medium;
+
+
 }
+
 
 .hero-section .metaslider {
     position: relative;

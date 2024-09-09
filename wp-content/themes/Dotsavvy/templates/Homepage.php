@@ -177,10 +177,10 @@ $service_items_query = new WP_Query(array(
 ));
 
 if ($service_items_query->have_posts()) :
-    echo '<div class="grid lg:grid-cols-3 sm:grid-cols-3 grid-cols-1 lg:mt-0 sm:mt-0 mt-6  sm:gap-1  gap-3 md:pl-20 sm:pl-20 pl-44 lg:gap-y-12 sm:gap-y-6">';
+    echo '<div class="grid lg:grid-cols-3 sm:grid-cols-3 grid-cols-1 lg:mt-0 sm:mt-0 mt-6  sm:gap-1  gap-2 md:pl-20 sm:pl-20 pl-44 lg:gap-y-12 sm:gap-y-6">';
     while ($service_items_query->have_posts()) : $service_items_query->the_post(); ?>
         <div class="service-item flex md:ml-10">
-            <h2 id="service-item-rounded"  class="service-title  flex border rounded-full lg:px-12  md:py-2 sm:px-3 sm:py-2 px-2 tracking-tighter sm:text-xs text-xs md:tracking-normal md:text-sm "><?php the_title(); ?></h2>
+            <h2 id="service-item-rounded"  class="service-title  flex border rounded-full lg:px-12  md:py-2 sm:px-2 sm:py-2 px-2 tracking-tighter sm:text-xs text-xs md:tracking-normal md:text-sm "><?php the_title(); ?></h2>
         </div>
     <?php endwhile;
     echo '</div>';
