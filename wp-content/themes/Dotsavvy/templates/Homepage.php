@@ -49,34 +49,26 @@ document.getElementById('menu').addEventListener('click', function() {
     </div>
 </section>
 
-<section class="">
-<?php
-$hero_query = new WP_Query(array('post_type' => 'hero_section', 'posts_per_page' => 1));
-if ($hero_query->have_posts()) :
-    while ($hero_query->have_posts()) : $hero_query->the_post();
-        $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
-        ?>
-        <div id="hero" class="hero-section" style="background-image: url('<?php echo esc_url($thumbnail_url); ?>'); background-size: cover; background-position: center;">
-            <div class="hero-content text-white md:pt-60 sm:pt-64 pt-72  md:ml-20 ml-4">
-                <div class="md:w-1/3 w-1/2">
-                <h1 class="md:text-7xl sm:text-5xl text-3xl md:tracking-normal sm:tracking-normal tracking-tight">
-                    <?php the_title(); ?>
-                </h1>
-
-                </div>
-                <div class="pt-3 md:w-1/4 w-1/2 md:text-xl sm:text-xl text-xs ">
-                <p class="text-xl"><?php the_content(); ?>
-                </p>
-                </div>
-            </div>
+<section class="hero-section relative">
+    <div class="hero-content absolute top-1/4 left-0 transform -translate-y-1/2 text-white z-10 animate-text-fade-in">
+        <div class="md:w-1/2 w-1/2 ml-4">
+            <h1 class="md:text-7xl sm:text-5xl text-3xl md:tracking-normal sm:tracking-normal tracking-tight">
+                It Always Starts Digital.
+            </h1>
         </div>
-        <?php
-    endwhile;
-    wp_reset_postdata();
-endif;
-?>
+        <div class="pt-3 md:w-1/2 w-3/5 md:text-xl sm:text-xl text-xs ml-4">
+            <p class="text-xl">
+                Award winning digital marketing agency in Kenya and Africa.
+            </p>
+        </div>
+    </div>
 
+    <!-- MetaSlider Slideshow -->
+    <div class="relative">
+        <?php echo do_shortcode('[metaslider id="124"]'); ?>
+    </div>
 </section>
+
 <section id="brands" class="flex items-center justify-center">
     <div class="brand-container">
         <?php
@@ -94,7 +86,7 @@ endif;
                 $delay = $counter * 2; // 2 seconds delay for each image
         ?>
                 <div class="brand-item opacity-0" style="--animation-delay: <?php echo esc_attr($delay); ?>s;">
-                    <img src="<?php echo esc_url($brand_image); ?>" alt="<?php the_title(); ?>" class="w-full pt-3">
+                    <img src="<?php echo esc_url($brand_image); ?>" alt="<?php the_title(); ?>" class="w-full pt-3 px-3">
                 </div>
         <?php
                 $counter++;
@@ -164,7 +156,7 @@ endif;
                 while ($services_query->have_posts()) : $services_query->the_post(); ?>
                     <div class="service lg:px-24 lg:pt-24 sm:mr-14 mr-5 px-3 py-2 sm:px-10 sm:pt-12 ">
                         <div class="lg:w-1/2 w-full">
-                        <h2 class="service-title lg:text-7xl  sm:text-3xl">
+                        <h2 class="service-title lg:text-7xl  sm:text-5xl">
                             <?php the_title(); ?>
                         </h2>
                         </div>
@@ -210,7 +202,7 @@ endif;
 <section class="">
     <div class="relative " id="">
         <div class="  pb-5 py-5  px-10 ">
-            <h1 class="md:text-7xl text-3xl">Our Work</h1>
+            <h1 class="md:text-7xl text-5xl">Our Work</h1>
 
         </div>
         <div class="flex justify-between" id="Hunters">
@@ -291,14 +283,14 @@ endif;
         </div>
         <div>
         <div id="stats" class="grid grid-cols-2  md:gap-5 sm:gap-5 gap-3 md:mt-10 sm:mt-10 sm:ml-20 ml-6 text-xs">
-    <div class="track-card bg-white shadow-lg lg:w-72 lg:h-52 sm:w-44 sm:h-32 w-24 border-t-2 border-black opacity-0 translate-y-10 transition-all duration-500">
+    <div class="track-card bg-white shadow-lg lg:w-72 lg:h-52 sm:w-44 sm:h-32 w-28 border-t-2 border-black opacity-0 translate-y-10 transition-all duration-500">
         <div class="pt-2 lg:my-16 flex flex-col my-5 items-center justify-center">
             <p class="text-4xl text-red-600 font-semibold statistic-number" data-number="20" data-symbol="+">0</p>
             <p>Years Of Experience</p>
         </div>
     </div>
     <div class="track-card bg-white shadow-lg lg:w-72 lg:h-52 sm:w-44 sm:h-32 w-28 border-t-2 border-red-500 opacity-0 translate-y-10 transition-all duration-500">
-        <div class="pt-2 flex flex-col lg:my-16 sm:my-5 items-center justify-center">
+        <div class="pt-2 flex flex-col lg:my-16 my-5 items-center justify-center">
             <p class="text-4xl text-red-600 font-semibold statistic-number" data-number="16">0</p>
             <p>Digital Gurus</p>
         </div>
