@@ -225,14 +225,17 @@ font-weight: 200;
 }
 /* Initially hide the menu */
 #menu-container {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+    border-radius: 5px;
     display: none; /* Hidden by default */
     position: absolute; /* Position the menu where you want it to appear */
-    top: 40px; /* Adjust to position the menu below the image */
+    top: 45px; /* Adjust to position the menu below the image */
     right: 0;
     width: fit-content; /* Full width or adjust as needed */
     background-color: #fff; /* Background color */
     z-index: 1000;
-    width: 100%; /* Ensure the menu is above other elements */
+    width: 30%; /* Ensure the menu is above other elements */
     opacity: 0; /* Start as invisible */
     transform: translateY(-10px); /* Slightly offset to give a sliding effect */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
