@@ -235,7 +235,7 @@ font-weight: 200;
     width: fit-content; /* Full width or adjust as needed */
     background-color: #fff; /* Background color */
     z-index: 1000;
-    width: 30%; /* Ensure the menu is above other elements */
+    width: 40%; /* Ensure the menu is above other elements */
     opacity: 0; /* Start as invisible */
     transform: translateY(-10px); /* Slightly offset to give a sliding effect */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
@@ -250,8 +250,7 @@ font-weight: 200;
 
 .ERIC{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 
 .your-menu-class {
@@ -259,11 +258,14 @@ font-weight: 200;
     padding: 0;
     margin: 0;
     display: flex;
+    
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
-
+#socials{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
 .your-menu-class li {
     padding: 10px 15px;
     

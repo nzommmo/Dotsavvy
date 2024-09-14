@@ -30,10 +30,22 @@ get_header(); ?>
         'menu_class' => 'your-menu-class', // Optional: Add a custom class for styling
     ));
     ?>
+    <div id="socials" class="">
+        <ul class="flex flex-col gap-3">
+        <li><a href="#">Instagram</a></li>
+    <li><a href="#">Facebook</a></li>
+    <li><a href="#">Linkedin</a></li>
+    <li><a href="#">X(Twitter)</a></li>
+
+
+        </ul>
+
+
+</div>
 </nav>
 
 
-</nav>
+
 <script>
 document.getElementById('menu').addEventListener('click', function() {
     var menuContainer = document.getElementById('menu-container');
